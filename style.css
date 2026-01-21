@@ -1,33 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&family=Outfit:wght@400;500;700&display=swap');
 
 :root {
-    --primary: #2563eb;
-    --dark: #111827;
-    --light: #f3f4f6;
-    --glass-bg: rgba(255, 255, 255, 0.95);
-    --glass-border: rgba(255, 255, 255, 0.2);
+    --primary: #3b82f6;
+    --dark: #0f172a;
+    --card: #1e293b;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
 }
 
 body {
     font-family: 'Outfit', 'Noto Sans Sinhala', sans-serif;
-    background-color: #f8fafc;
-    color: #1f2937;
+    background-color: var(--dark);
+    color: var(--text);
     overflow-x: hidden;
 }
 
 /* Glassmorphism */
 .glass {
-    background: var(--glass-bg);
+    background: rgba(30, 41, 59, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .glass-dark {
-    background: rgba(17, 24, 39, 0.85);
+    background: rgba(15, 23, 42, 0.9);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Animations */
@@ -37,56 +37,41 @@ body {
 
 .hover-scale:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
 }
 
-.fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
-    opacity: 0;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Custom Scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
+    background: #334155;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    background: #475569;
 }
 
-/* Ad Containers */
+/* Ads */
 .ad-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 1.5rem 0;
     overflow: hidden;
+    background-color: #1e293b;
+    /* Dark card bg */
 }
 
 .ad-label {
     font-size: 0.75rem;
-    color: #9ca3af;
+    color: #64748b;
     text-align: center;
     margin-bottom: 0.25rem;
     text-transform: uppercase;
@@ -95,7 +80,7 @@ body {
 
 /* Typography Gradient */
 .text-gradient {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
