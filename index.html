@@ -1,257 +1,365 @@
 <!DOCTYPE html>
-<html lang="si">
+<html lang="si" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ලංකා පුවත් | Lanka News</title>
+    <title>Lanka News | Sri Lanka's Premium News Portal</title>
+    <meta name="description"
+        content="Get the latest updates, breaking news, technology trends, and lifestyle stories from Sri Lanka.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Parallax Background */
-        .parallax {
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-        }
-        /* Hover Effects */
-        .news-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .news-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-100 font-sans">
-    <header class="parallax bg-[url('https://picsum.photos/1920/1080?random=0')] h-96 flex items-center justify-center text-white">
-        <div class="text-center">
-            <h1 class="text-5xl font-bold">ලංකා පුවත්</h1>
-            <p class="text-xl mt-2">ඔබේ දෛනික පුවත් මූලාශ්‍රය</p>
+
+<body class="bg-slate-50">
+
+    <!-- Sticky Header -->
+    <header class="fixed w-full top-0 z-50 glass-dark text-white transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="bg-blue-600 text-white p-2 rounded-lg group-hover:bg-blue-500 transition-colors">
+                    <i class="fa-solid fa-newspaper text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight">Lanka<span class="text-blue-400">News</span></span>
+            </a>
+
+            <nav class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="category.html" class="hover:text-blue-400 transition-colors">Politics</a>
+                <a href="category.html" class="hover:text-blue-400 transition-colors">Technology</a>
+                <a href="category.html" class="hover:text-blue-400 transition-colors">Lifestyle</a>
+                <a href="category.html" class="hover:text-blue-400 transition-colors">Sports</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button class="md:hidden text-white text-2xl"><i class="fa-solid fa-bars"></i></button>
+                <a href="#"
+                    class="hidden md:block bg-blue-600 hover:bg-blue-500 px-5 py-2 rounded-full font-semibold transition-transform hover:scale-105">Subscribe</a>
+            </div>
         </div>
     </header>
-    <!-- Banner 468x60 -->
-    <div class="my-4 text-center">
-        <script type="text/javascript">
-            atOptions = {
-                'key' : '7f8c7c7b9e4fb6afd36e162fd9077ad3',
-                'format' : 'iframe',
-                'height' : 60,
-                'width' : 468,
-                'params' : {}
-            };
-        </script>
-        <script type="text/javascript" src="//embraceattaindatabase.com/7f8c7c7b9e4fb6afd36e162fd9077ad3/invoke.js"></script>
+
+    <!-- Main Content wrapper to push down from fixed header -->
+    <div class="pt-20">
+
+        <!-- Top Ad Banner (468x60) -->
+        <div class="ad-container bg-white shadow-sm py-4 border-b border-gray-100">
+            <div>
+                <p class="ad-label">Advertisement</p>
+                <script type="text/javascript">
+                    atOptions = {
+                        'key': '7f8c7c7b9e4fb6afd36e162fd9077ad3',
+                        'format': 'iframe',
+                        'height': 60,
+                        'width': 468,
+                        'params': {}
+                    };
+                </script>
+                <script type="text/javascript"
+                    src="//ancestorheadquarters.com/7f8c7c7b9e4fb6afd36e162fd9077ad3/invoke.js"></script>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Featured Article -->
+                <div class="lg:col-span-2 group relative overflow-hidden rounded-2xl shadow-2xl h-[500px] cursor-pointer"
+                    onclick="window.location.href='article.html'">
+                    <img src="https://picsum.photos/1200/800?random=100" alt="Featured"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 text-white max-w-2xl">
+                        <span
+                            class="bg-blue-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Breaking
+                            News</span>
+                        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">කොළඹ නව ගුවන් තොටුපළ විවෘතයි:
+                            අනාගතයට පියවරක්</h1>
+                        <p class="text-gray-300 text-lg line-clamp-2">ශ්‍රී ලංකාවේ සංචාරක ව්‍යාපාරය නගා සිටුවීමේ
+                            අරමුණින් ඉදිකළ නව පර්යන්තය අද විවෘත විය. සම්පූර්ණ විස්තර මෙන්න.</p>
+                    </div>
+                </div>
+
+                <!-- Trending / Sidebar -->
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                            <span class="w-1 h-6 bg-blue-600 rounded-full"></span> Trending Now
+                        </h3>
+                        <div class="space-y-4">
+                            <a href="article.html" class="flex gap-4 group items-start">
+                                <span
+                                    class="text-3xl font-bold text-gray-200 group-hover:text-blue-600 transition-colors">01</span>
+                                <div>
+                                    <h4 class="font-semibold group-hover:text-blue-600 transition-colors leading-snug">
+                                        Dialog 5G සේවාව දැන් මුළු දිවයිනටම!</h4>
+                                    <span class="text-xs text-gray-500">2 hours ago</span>
+                                </div>
+                            </a>
+                            <div class="h-px bg-gray-100"></div>
+                            <a href="article.html" class="flex gap-4 group items-start">
+                                <span
+                                    class="text-3xl font-bold text-gray-200 group-hover:text-blue-600 transition-colors">02</span>
+                                <div>
+                                    <h4 class="font-semibold group-hover:text-blue-600 transition-colors leading-snug">
+                                        නව අධ්‍යාපන ප්‍රතිසංස්කරණ හෙළිවේ</h4>
+                                    <span class="text-xs text-gray-500">4 hours ago</span>
+                                </div>
+                            </a>
+                            <div class="h-px bg-gray-100"></div>
+                            <a href="article.html" class="flex gap-4 group items-start">
+                                <span
+                                    class="text-3xl font-bold text-gray-200 group-hover:text-blue-600 transition-colors">03</span>
+                                <div>
+                                    <h4 class="font-semibold group-hover:text-blue-600 transition-colors leading-snug">
+                                        ලංකා - ඉන්දියා ක්‍රිකට් තරඟාවලිය</h4>
+                                    <span class="text-xs text-gray-500">5 hours ago</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Ad (300x250 placeholder - using 320x50 script for now or mobile logic) -->
+                    <!-- Actually user gave 320x50 script, keeping it generally available but usually sidebar is bigger. I'll put the 320x50 here for mobile/desktop flexibility -->
+                    <div class="ad-container bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div>
+                            <p class="ad-label">Sponsored</p>
+                            <script type="text/javascript">
+                                atOptions = {
+                                    'key': '56c27a657755ebb1d834e9687a5ba6ee',
+                                    'format': 'iframe',
+                                    'height': 50,
+                                    'width': 320,
+                                    'params': {}
+                                };
+                            </script>
+                            <script type="text/javascript"
+                                src="//ancestorheadquarters.com/56c27a657755ebb1d834e9687a5ba6ee/invoke.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Section (Tech) -->
+        <section class="bg-gray-50 py-12 border-y border-gray-200">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-end mb-8">
+                    <div>
+                        <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Technology</span>
+                        <h2 class="text-3xl font-bold text-gray-900 mt-1">Tech World Update</h2>
+                    </div>
+                    <a href="category.html"
+                        class="text-gray-500 hover:text-blue-600 font-medium flex items-center gap-2">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-xl shadow-sm hover-scale overflow-hidden group cursor-pointer"
+                        onclick="window.location.href='article.html'">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://picsum.photos/400/300?random=10" alt="Tech"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold text-gray-800">
+                                Review</div>
+                        </div>
+                        <div class="p-5">
+                            <h3
+                                class="font-bold text-lg leading-tight mb-2 group-hover:text-blue-600 transition-colors">
+                                අලුත්ම iPhone 16 ගැන මේ දේවල් දන්නවද?</h3>
+                            <p class="text-gray-500 text-sm line-clamp-2">ඔබ බලාපොරොත්තු නොවන අලුත්ම විශේෂාංග...</p>
+                        </div>
+                    </div>
+
+                    <!-- Native Ad Spot masked as content -->
+                    <div
+                        class="bg-blue-50/50 rounded-xl border border-blue-100 p-4 flex flex-col justify-center items-center text-center">
+                        <span
+                            class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">Advertisement</span>
+                        <script async="async" data-cfasync="false"
+                            src="//ancestorheadquarters.com/396745d2156df4e04596e78f6d57eb29/invoke.js"></script>
+                        <div id="container-396745d2156df4e04596e78f6d57eb29"></div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-xl shadow-sm hover-scale overflow-hidden group cursor-pointer"
+                        onclick="window.location.href='article.html'">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/400/300?random=11" alt="Tech"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h3
+                                class="font-bold text-lg leading-tight mb-2 group-hover:text-blue-600 transition-colors">
+                                AI තාක්ෂණය ලෝකය වෙනස් කරයි</h3>
+                            <p class="text-gray-500 text-sm line-clamp-2">කෘෂිකර්මාන්තයට සහ සෞඛ්‍යයට AI බලපෑම...</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-xl shadow-sm hover-scale overflow-hidden group cursor-pointer"
+                        onclick="window.location.href='article.html'">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/400/300?random=12" alt="Tech"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h3
+                                class="font-bold text-lg leading-tight mb-2 group-hover:text-blue-600 transition-colors">
+                                Electric වාහන මිල අඩුවෙයිද?</h3>
+                            <p class="text-gray-500 text-sm line-clamp-2">2025 අයවැයෙන් ලැබුණු සහන මෙන්න...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lifestyle Grid -->
+        <section class="container mx-auto px-4 py-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Lifestyle & Entertainment</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Large Card -->
+                <div class="md:col-span-2 bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer"
+                    onclick="window.location.href='article.html'">
+                    <div class="relative h-64 md:h-80 overflow-hidden">
+                        <img src="https://picsum.photos/800/600?random=20" alt="Lifestyle"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">ගාල්ලේ
+                                පැවැත්වෙන ලොකුම Beach Party එක</h3>
+                            <p class="text-gray-200 mt-2">සංගීතය, විනෝදය සහ තවත් බොහෝ දේ...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Cards Column -->
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-center group cursor-pointer"
+                        onclick="window.location.href='article.html'">
+                        <img src="https://picsum.photos/200/200?random=21"
+                            class="w-24 h-24 rounded-lg object-cover shadow-md group-hover:shadow-lg transition-all"
+                            alt="Thumb">
+                        <div>
+                            <span class="text-xs font-bold text-purple-600 uppercase">Gossip</span>
+                            <h4 class="font-bold leading-tight group-hover:text-purple-600 transition-colors">ප්‍රසිද්ධ
+                                නිළියකගේ රහස හෙළිවේ!</h4>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-center group cursor-pointer"
+                        onclick="window.location.href='article.html'">
+                        <img src="https://picsum.photos/200/200?random=22"
+                            class="w-24 h-24 rounded-lg object-cover shadow-md group-hover:shadow-lg transition-all"
+                            alt="Thumb">
+                        <div>
+                            <span class="text-xs font-bold text-orange-600 uppercase">Travel</span>
+                            <h4 class="font-bold leading-tight group-hover:text-orange-600 transition-colors">ලංකාවේ
+                                සැඟවුණු රහස් වෙරළ තීරයන්</h4>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-center group cursor-pointer"
+                        onclick="window.location.href='article.html'">
+                        <img src="https://picsum.photos/200/200?random=23"
+                            class="w-24 h-24 rounded-lg object-cover shadow-md group-hover:shadow-lg transition-all"
+                            alt="Thumb">
+                        <div>
+                            <span class="text-xs font-bold text-green-600 uppercase">Health</span>
+                            <h4 class="font-bold leading-tight group-hover:text-green-600 transition-colors">සෞඛ්‍ය
+                                සම්පන්න දිවියකට උපදෙස්</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Native Banner 2 -->
+        <div class="container mx-auto px-4 mb-12">
+            <div class="ad-container bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <div class="text-center w-full">
+                    <p class="ad-label mb-4">You May Like</p>
+                    <div class="flex justify-center">
+                        <script async="async" data-cfasync="false"
+                            src="//ancestorheadquarters.com/bf690daf5da4294a23cf744d586c7216/invoke.js"></script>
+                        <div id="container-bf690daf5da4294a23cf744d586c7216"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <!-- Popunder -->
-    <script type='text/javascript' src='//embraceattaindatabase.com/e0/5e/d7/e05ed770411b84e593be9a0654b3326d.js'></script>
-    <!-- Social Bar -->
-    <script type='text/javascript' src='//embraceattaindatabase.com/1a/be/c4/1abec493c66c00467f75c5ecb9365fba.js'></script>
-    <main class="container mx-auto py-8">
-        <!-- Banner 320x50 -->
-        <div class="my-8 text-center">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '56c27a657755ebb1d834e9687a5ba6ee',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//embraceattaindatabase.com/56c27a657755ebb1d834e9687a5ba6ee/invoke.js"></script>
-        </div>
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://picsum.photos/800/400?random=1" alt="Colombo Airport" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="text-xl font-bold">කොළඹ නව ගුවන් තොටුපළ විවෘතයි!</h2>
-                    <p class="text-gray-600 mt-2">ශ්‍රී ලංකාවේ නවීනතම ගුවන් තොටුපළ ගැන ඔබ දැනගත යුතු සියල්ල...</p>
-                    <a href="#" class="text-blue-500 mt-4 inline-block">වැඩිදුර කියවන්න</a>
-                </div>
-            </div>
-            <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://picsum.photos/800/400?random=3" alt="Tech Secrets" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="text-xl font-bold">අලුත්ම ටෙක් රහස් හෙළිවෙයි!</h2>
-                    <p class="text-gray-600 mt-2">ශ්‍රී ලංකාවේ තාක්ෂණික ලෝකයේ නවතම රහස් මෙන්න...</p>
-                    <a href="#" class="text-blue-500 mt-4 inline-block">වැඩිදුර කියවන්න</a>
-                </div>
-            </div>
-            <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://picsum.photos/800/400?random=4" alt="Beach Party" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="text-xl font-bold">බිච් පාටි එකක් එනවා!</h2>
-                    <p class="text-gray-600 mt-2">ගාල්ලේදී ලබන සතියේ ලොකුම බීච් පාටි එක...</p>
-                    <a href="#" class="text-blue-500 mt-4 inline-block">වැඩිදුර කියවන්න</a>
-                </div>
-            </div>
-            <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://picsum.photos/800/400?random=5" alt="Cricket Match" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="text-xl font-bold">ලංකා - ඉන්දියා ක්‍රිකට් තරඟාවලිය: සියලු විස්තර!</h2>
-                    <p class="text-gray-600 mt-2">මෙවර ක්‍රිකට් තරඟාවලියේ උණුසුම්ම තොරතුරු සහ විශේෂාංග...</p>
-                    <a href="#" class="text-blue-500 mt-4 inline-block">වැඩිදුර කියවන්න</a>
-                </div>
-            </div>
-            <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://picsum.photos/800/400?random=6" alt="Economy" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="text-xl font-bold">රටේ ආර්ථිකය ශක්තිමත් වෙයිද?</h2>
-                    <p class="text-gray-600 mt-2">නව ආර්ථික ප්‍රතිසංස්කරණ සහ ඉදිරි දැක්ම...</p>
-                    <a href="#" class="text-blue-500 mt-4 inline-block">වැඩිදුර කියවන්න</a>
-                </div>
-            </div>
-            <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://picsum.photos/800/400?random=7" alt="Cultural Festival" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="text-xl font-bold">කැන්ඩි පෙරහැර: අසිරිමත් උත්සවය!</h2>
-                    <p class="text-gray-600 mt-2">ලෝක ප්‍රකට මහනුවර දළදා පෙරහැර ගැන ඔබ නොදත් දේ...</p>
-                    <a href="#" class="text-blue-500 mt-4 inline-block">වැඩිදුර කියවන්න</a>
-                </div>
-            </div>
-        </section>
-        <!-- Native Banner -->
-        <div class="my-8 text-center">
-            <script async="async" data-cfasync="false" src="//embraceattaindatabase.com/396745d2156df4e04596e78f6d57eb29/invoke.js"></script>
-            <div id="container-396745d2156df4e04596e78f6d57eb29"></div>
-        </div>
-        <section class="my-12">
-            <h2 class="text-3xl font-bold text-center mb-6">Dialog පාරිභෝගිකයින්ට විශේෂ පුවත්!</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=8" alt="Dialog Offer" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold">Dialog වෙතින් අලුත්ම දත්ත පැකේජය!</h3>
-                        <p class="text-gray-600 mt-2">ඔබේ අන්තර්ජාල අවශ්‍යතා සඳහා අලුත්ම දත්ත පැකේජය දැන් Dialog වෙතින්...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">වැඩිදුර විස්තර</a>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-blue-600 p-2 rounded-lg">
+                            <i class="fa-solid fa-newspaper text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Lanka<span class="text-blue-400">News</span></span>
                     </div>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        With a commitment to integrity and innovation, Lanka News brings you the stories that matter
+                        most. Stay informed, stay ahead.
+                    </p>
                 </div>
-                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=9" alt="Dialog Rewards" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold">Dialog Star Points ත්‍යාග!</h3>
-                        <p class="text-gray-600 mt-2">ඔබගේ Star Points සමඟින් ලබාගත හැකි ආකර්ෂණීය ත්‍යාග මොනවාදැයි බලන්න.</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">දැන්ම බලන්න</a>
-                    </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="category.html" class="hover:text-white transition-colors">Latest News</a></li>
+                        <li><a href="category.html" class="hover:text-white transition-colors">Trending</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
                 </div>
-                 <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=10" alt="Dialog 5G" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold">Dialog 5G සේවාව දිවයින පුරා!</h3>
-                        <p class="text-gray-600 mt-2">අති වේගවත් 5G අත්දැකීම දැන් Dialog සමඟින්...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">තව දැනගන්න</a>
-                    </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Categories</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="category.html" class="hover:text-white transition-colors">Politics</a></li>
+                        <li><a href="category.html" class="hover:text-white transition-colors">Business</a></li>
+                        <li><a href="category.html" class="hover:text-white transition-colors">Technology</a></li>
+                        <li><a href="category.html" class="hover:text-white transition-colors">Sports</a></li>
+                    </ul>
                 </div>
-                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=11" alt="Dialog Mobile App" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold">MyDialog App එකෙන් ඔබට ලැබෙන වාසි!</h3>
-                        <p class="text-gray-600 mt-2">ඔබේ දුරකථන බිල්පත් ගෙවීම්, දත්ත කළමනාකරණය පහසුවෙන් කරන්න.</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">ප්‍රයෝජන ගන්න</a>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe to our newsletter for daily updates.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email"
+                            class="bg-slate-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-blue-500 w-full text-sm">
+                        <button class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-500 transition-colors"><i
+                                class="fa-solid fa-paper-plane"></i></button>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="my-12">
-            <h2 class="text-3xl font-bold text-center mb-6">නවතම ප්‍රවෘත්ති</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=12" alt="Education" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold">නව අධ්‍යාපන ප්‍රතිසංස්කරණ!</h3>
-                        <p class="text-gray-600 mt-2">ළමුන්ගේ අනාගතය වෙනුවෙන් ගෙන එන නව වෙනස්කම්...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">වැඩිදුර විස්තර</a>
-                    </div>
-                </div>
-                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=13" alt="Healthcare" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold">සෞඛ්‍ය අංශයේ නව දියුණුවක්!</h3>
-                        <p class="text-gray-600 mt-2">රටේ සෞඛ්‍ය සේවාවට එකතු වන නවතම පහසුකම්...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">වැඩිදුර කියවන්න</a>
-                    </div>
-                </div>
-                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=14" alt="Environment" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold">පරිසරය සුරැකීමට නව වැඩසටහන්!</h3>
-                        <p class="text-gray-600 mt-2">ශ්‍රී ලංකාවේ පරිසරය රැකගැනීම සඳහා ගෙන ඇති පියවර...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">වැඩිදුර බලන්න</a>
-                    </div>
-                </div>
-                 <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=15" alt="Politics" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold">පාර්ලිමේන්තුවේ උණුසුම් විවාදයක්!</h3>
-                        <p class="text-gray-600 mt-2">රටේ වර්තමාන තත්වය පිළිබඳ පාර්ලිමේන්තු විවාදය...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">සම්පූර්ණ විස්තර</a>
-                    </div>
-                </div>
-                 <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=16" alt="Agriculture" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold">කෘෂිකර්මාන්තයට නව තාක්ෂණය!</h3>
-                        <p class="text-gray-600 mt-2">ගොවීන්ට සහන සැලසීමට නවීන තාක්ෂණික විසඳුම්...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">තවත් විස්තර</a>
-                    </div>
-                </div>
-                 <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=17" alt="Food" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-bold">ලංකාවේ රසම කෑම වර්ග 10!</h3>
-                        <p class="text-gray-600 mt-2">ඔබ අනිවාර්යයෙන්ම රස විඳිය යුතු ශ්‍රී ලාංකීය ආහාර...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">වට්ටෝරු බලන්න</a>
-                    </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2025 Lanka News. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors"><i
+                            class="fa-brands fa-facebook-f text-sm"></i></a>
+                    <a href="#"
+                        class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-400 transition-colors"><i
+                            class="fa-brands fa-twitter text-sm"></i></a>
+                    <a href="#"
+                        class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-pink-600 transition-colors"><i
+                            class="fa-brands fa-instagram text-sm"></i></a>
                 </div>
             </div>
-        </section>
-        <section class="my-12">
-            <h2 class="text-3xl font-bold text-center mb-6">ඔබ විශ්වාස නොකරන පුවත්!</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=18" alt="Secret Beach" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold">මෙන්න ශ්‍රී ලංකාවේ රහස් වෙරළක්!</h3>
-                        <p class="text-gray-600 mt-2">ඔබ කවදාවත් නොදුටු ලංකාවේ රහස් තැන්...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">දැන්ම බලන්න</a>
-                    </div>
-                </div>
-                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=19" alt="Life-Changing Secret" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold">ඔබේ ජීවිතය වෙනස් කරන රහස!</h3>
-                        <p class="text-gray-600 mt-2">මේ රහස ඔබේ ජීවිතය එක රැයකින් වෙනස් කරයි...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">දැන්ම බලන්න</a>
-                    </div>
-                </div>
-                 <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=20" alt="Amazing Facts" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold">ලෝකයේ ඔබ නොදත් පුදුම සහගත කරුණු 5ක්!</h3>
-                        <p class="text-gray-600 mt-2">මේවා දැනගත්තම ඔබ පුදුම වේවි...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">දැන්ම කියවන්න</a>
-                    </div>
-                </div>
-                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/800/400?random=21" alt="Celebrity Secret" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold">ප්‍රසිද්ධ නිළියකගේ රහස හෙළිවේ!</h3>
-                        <p class="text-gray-600 mt-2">ඇය මේ තරම් ලස්සනට ඉන්නේ ඇයි කියලා දැනගන්න...</p>
-                        <a href="#" class="text-blue-500 mt-4 inline-block">රහස බලන්න</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Native banner2 -->
-        <div class="my-8 text-center">
-            <script async="async" data-cfasync="false" src="//embraceattaindatabase.com/bf690daf5da4294a23cf744d586c7216/invoke.js"></script>
-            <div id="container-bf690daf5da4294a23cf744d586c7216"></div>
-        </div>
-    </main>
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2025 ලංකා පුවත්. සියලු හිමිකම් ඇවිරිණි.</p>
         </div>
     </footer>
+
+    <!-- Global Popunder Script -->
+    <script type='text/javascript'
+        src='//embraceattaindatabase.com/e0/5e/d7/e05ed770411b84e593be9a0654b3326d.js'></script>
+    <!-- Social Bar Script -->
+    <script type='text/javascript'
+        src='//embraceattaindatabase.com/1a/be/c4/1abec493c66c00467f75c5ecb9365fba.js'></script>
+
 </body>
+
 </html>

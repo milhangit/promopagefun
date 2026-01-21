@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="si" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News | Lanka News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-50">
+
+    <!-- Sticky Header -->
+    <header class="fixed w-full top-0 z-50 glass-dark text-white transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="bg-blue-600 text-white p-2 rounded-lg group-hover:bg-blue-500 transition-colors">
+                    <i class="fa-solid fa-newspaper text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight">Lanka<span class="text-blue-400">News</span></span>
+            </a>
+
+            <nav class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="category.html" class="text-blue-400 transition-colors">Politics</a>
+                <a href="category.html" class="hover:text-blue-400 transition-colors">Technology</a>
+                <a href="category.html" class="hover:text-blue-400 transition-colors">Lifestyle</a>
+                <a href="category.html" class="hover:text-blue-400 transition-colors">Sports</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button class="md:hidden text-white text-2xl"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="pt-20">
+
+        <!-- Header Ad -->
+        <div class="ad-container bg-white shadow-sm py-4 border-b border-gray-100">
+            <div>
+                <p class="ad-label">Advertisement</p>
+                <script type="text/javascript">
+                    atOptions = {
+                        'key': '7f8c7c7b9e4fb6afd36e162fd9077ad3',
+                        'format': 'iframe',
+                        'height': 60,
+                        'width': 468,
+                        'params': {}
+                    };
+                </script>
+                <script type="text/javascript"
+                    src="//ancestorheadquarters.com/7f8c7c7b9e4fb6afd36e162fd9077ad3/invoke.js"></script>
+            </div>
+        </div>
+
+        <section class="bg-blue-600 text-white py-12 mb-8">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold mb-2">Latest News</h1>
+                <p class="text-blue-100">Updates, insights, and stories from Sri Lanka and beyond.</p>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-4 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Article Card 1 -->
+                <div class="bg-white rounded-2xl shadow-sm hover-scale overflow-hidden group cursor-pointer"
+                    onclick="window.location.href='article.html'">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://picsum.photos/400/300?random=15" alt="News"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Politics</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-blue-600 transition-colors leading-tight">
+                            පාර්ලිමේන්තුවේ උණුසුම් විවාදයක්!</h3>
+                        <p class="text-gray-500 line-clamp-2 text-sm">රටේ වර්තමාන තත්වය පිළිබඳ පාර්ලිමේන්තු විවාදය අද
+                            දින පැවැත්වුණි...</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gray-400 font-medium">
+                            <i class="fa-regular fa-clock"></i> 30 mins ago
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Card 2 -->
+                <div class="bg-white rounded-2xl shadow-sm hover-scale overflow-hidden group cursor-pointer"
+                    onclick="window.location.href='article.html'">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://picsum.photos/400/300?random=16" alt="News"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">Economy</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-blue-600 transition-colors leading-tight">
+                            කෘෂිකර්මාන්තයට නව තාක්ෂණය!</h3>
+                        <p class="text-gray-500 line-clamp-2 text-sm">ගොවීන්ට සහන සැලසීමට නවීන තාක්ෂණික විසඳුම් හඳුන්වා
+                            දීමට රජය තීරණය කරයි...</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gray-400 font-medium">
+                            <i class="fa-regular fa-clock"></i> 1 hour ago
+                        </div>
+                    </div>
+                </div>
+
+                <!-- In-Feed Ad -->
+                <div
+                    class="bg-white rounded-2xl shadow-sm border border-blue-100 p-6 flex flex-col justify-center items-center text-center">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">Sponsored</span>
+                    <script async="async" data-cfasync="false"
+                        src="//ancestorheadquarters.com/396745d2156df4e04596e78f6d57eb29/invoke.js"></script>
+                    <div id="container-396745d2156df4e04596e78f6d57eb29"></div>
+                </div>
+
+                <!-- Article Card 3 -->
+                <div class="bg-white rounded-2xl shadow-sm hover-scale overflow-hidden group cursor-pointer"
+                    onclick="window.location.href='article.html'">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://picsum.photos/400/300?random=17" alt="News"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">Food</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-blue-600 transition-colors leading-tight">
+                            ලංකාවේ රසම කෑම වර්ග 10!</h3>
+                        <p class="text-gray-500 line-clamp-2 text-sm">ඔබ අනිවාර්යයෙන්ම රස විඳිය යුතු ශ්‍රී ලාංකීය ආහාර
+                            වට්ටෝරු...</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gray-400 font-medium">
+                            <i class="fa-regular fa-clock"></i> 2 hours ago
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Card 4 -->
+                <div class="bg-white rounded-2xl shadow-sm hover-scale overflow-hidden group cursor-pointer"
+                    onclick="window.location.href='article.html'">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://picsum.photos/400/300?random=18" alt="News"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">Travel</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-blue-600 transition-colors leading-tight">
+                            මෙන්න ශ්‍රී ලංකාවේ රහස් වෙරළක්!</h3>
+                        <p class="text-gray-500 line-clamp-2 text-sm">ඔබ කවදාවත් නොදුටු ලංකාවේ රහස් තැන් ගවේෂණය කරන්න...
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gray-400 font-medium">
+                            <i class="fa-regular fa-clock"></i> 3 hours ago
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Card 5 -->
+                <div class="bg-white rounded-2xl shadow-sm hover-scale overflow-hidden group cursor-pointer"
+                    onclick="window.location.href='article.html'">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://picsum.photos/400/300?random=19" alt="News"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded">Life</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-blue-600 transition-colors leading-tight">ඔබේ
+                            ජීවිතය වෙනස් කරන රහස!</h3>
+                        <p class="text-gray-500 line-clamp-2 text-sm">ධනාත්මක චින්තනය තුළින් ජීවිතය ජයගන්නේ කෙසේද...</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-gray-400 font-medium">
+                            <i class="fa-regular fa-clock"></i> 5 hours ago
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12 gap-2">
+                <button
+                    class="w-10 h-10 rounded-lg flex items-center justify-center bg-white border border-gray-200 text-gray-500 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <button
+                    class="w-10 h-10 rounded-lg flex items-center justify-center bg-blue-600 text-white shadow-lg hover:bg-blue-500 transition-all">1</button>
+                <button
+                    class="w-10 h-10 rounded-lg flex items-center justify-center bg-white border border-gray-200 text-gray-500 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all">2</button>
+                <button
+                    class="w-10 h-10 rounded-lg flex items-center justify-center bg-white border border-gray-200 text-gray-500 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all">3</button>
+                <span class="w-10 h-10 flex items-center justify-center text-gray-400">...</span>
+                <button
+                    class="w-10 h-10 rounded-lg flex items-center justify-center bg-white border border-gray-200 text-gray-500 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+        </section>
+
+        <!-- Native ad footer -->
+        <div class="container mx-auto px-4 mb-20">
+            <div class="ad-container bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <div class="text-center w-full">
+                    <p class="ad-label mb-4">Recommended For You</p>
+                    <div class="flex justify-center">
+                        <script async="async" data-cfasync="false"
+                            src="//embraceattaindatabase.com/bf690daf5da4294a23cf744d586c7216/invoke.js"></script>
+                        <div id="container-bf690daf5da4294a23cf744d586c7216"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <div class="bg-blue-600 p-2 rounded-lg">
+                    <i class="fa-solid fa-newspaper text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold">Lanka<span class="text-blue-400">News</span></span>
+            </div>
+            <p>&copy; 2025 Lanka News. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Global Scripts -->
+    <script type='text/javascript'
+        src='//embraceattaindatabase.com/e0/5e/d7/e05ed770411b84e593be9a0654b3326d.js'></script>
+    <script type='text/javascript'
+        src='//embraceattaindatabase.com/1a/be/c4/1abec493c66c00467f75c5ecb9365fba.js'></script>
+
+</body>
+
+</html>
