@@ -60,7 +60,7 @@
 
         <!-- Top Ad Banner (468x60) -->
         <div class="bg-card shadow-sm py-4 border-b border-slate-700/50 flex justify-center">
-            <div class="text-center">
+            <div class="text-center w-[468px] h-[60px] mx-auto overflow-hidden bg-slate-800/10">
                 <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-2">Advertisement</p>
                 <script type="text/javascript">
                     atOptions = {
@@ -82,7 +82,7 @@
                 <!-- Featured Article -->
                 <div class="lg:col-span-2 group relative overflow-hidden rounded-2xl shadow-2xl shadow-black/50 h-[500px] cursor-pointer"
                     onclick="window.location.href='mulawa-3.html'">
-                    <img src="images/img1.webp" loading="lazy" alt="Featured"
+                    <img src="images/img1.webp" fetchpriority="high" alt="Featured"
                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8 text-white max-w-2xl">
@@ -142,17 +142,19 @@
                     <div
                         class="bg-card p-4 rounded-2xl shadow-lg border border-slate-700/50 flex flex-col items-center">
                         <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-2">Sponsored</p>
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key': '56c27a657755ebb1d834e9687a5ba6ee',
-                                'format': 'iframe',
-                                'height': 50,
-                                'width': 320,
-                                'params': {}
-                            };
-                        </script>
-                        <script type="text/javascript"
-                            src="//ancestorheadquarters.com/56c27a657755ebb1d834e9687a5ba6ee/invoke.js"></script>
+                        <div class="w-[320px] h-[50px] overflow-hidden bg-slate-800/10">
+                            <script type="text/javascript">
+                                atOptions = {
+                                    'key': '56c27a657755ebb1d834e9687a5ba6ee',
+                                    'format': 'iframe',
+                                    'height': 50,
+                                    'width': 320,
+                                    'params': {}
+                                };
+                            </script>
+                            <script type="text/javascript"
+                                src="//ancestorheadquarters.com/56c27a657755ebb1d834e9687a5ba6ee/invoke.js"></script>
+                        </div>
                     </div>
                 </div>
             </div>
